@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CurrencyChecker</title>
+    <link rel="stylesheet" href="../static/login.css">
+</head>
+<body>
+    <div class="main-page">
+
+        <div class="smooth login" id="login">
+        <h1 class="login__header header">Welcome back to the party club</h1>
+        <p class="login__byline">It's good to see you again, come in using your favourite social network</p>
+        
+        <fieldset class="form">
+        <form method="post" action="{{url_for('login')}}" class="form__body form-login">
+          <input class="form__input" type="text" name="username" placeholder="username">
+          <input class="form__input" name="pass" type="password" placeholder="password">
+           <button class="btn" type="submit">Sign in</button>
+        </form>  
+          </fieldset>
+      </div>
+      
+        <div class="switch">
+        <div class="switch__text-container"  id="switch-text">
+          <h1 class="switch__header header">Not yet a member?</h1>
+          <p>Sign up and discover what we can do for you</p>
+        </div>
+         <button class="btn-white btn" id="switch-button">Sign up</button>
+      </div>
+        
+          <div class="smooth signup hide-view" id="signup">
+        <h1 class="signup__header header">Create a new account</h1>
+        <p class="signup__byline">You can use your favourite social network</p>
+        <fieldset class="form">
+        <form method="post" action="{{url_for('register')}}" class="form__body form-login">
+          <div class="input__group">
+              <input class="form__input form__input-half" type="text" name="username" placeholder="first name">
+              <input class="form__input form__input-half" type="text" name="lastname" placeholder="last name">
+          </div>
+          <div class="input__group">
+             <input class="form__input form__input-half" name="email" type="email" placeholder="email">
+             <input class="form__input form__input-half" name="pass" type="password" placeholder="password">
+          </div>
+          <div class="input__group">
+            <input class="form__input-checkbox" type="checkbox"> I have read the <a href="#">terms and conditions</a>
+          </div>
+           <button class="btn" type="submit">Sign up</button> 
+        </form>  
+          </fieldset>
+      </div>
+        
+      </div>
+      <script src="../static/login.js"></script>
+</body>
+</html>
